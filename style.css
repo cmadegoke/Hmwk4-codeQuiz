@@ -1,3 +1,13 @@
 .hide {
     display: none;
   }
+.sub-header {
+float: right;
+}
+.container {
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    right: auto;
+    justify-items: center;
+}

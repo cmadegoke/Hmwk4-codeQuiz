@@ -4,24 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css"/>
     <title>Team Feud </title>
   </head>
   <body>
-    <header>
-      <h1>Team Feud</h1>
+    <header class="Timer">
+      <h1 class="app-title">Team Fued Game</h1>
+    <h2 class="app-subtitle">Time Left: <span id="time-left"></span></h2>
+    <button class="btn" id="startQuiz">Start the Quiz</button>
+    <div id="Quiz" style="display:none"></div>
     </header>
-    <div class="container">
-      <div class="timer">
+
+    <main class="flex-row justify-center">
+        <div id="question">Question</div>
+        <div id="choices">
+        
+          <div class="choice" id="A" >a</div>
+          <div class="choice" id="B" >b</div>
+          <div class="choice" id="C" >c</div>
+          <div class="choice" id="D" >d</div>
+          <div class="choice" id="E" >e</div>
+          
+        </div>
       </div>
+    </main>
+
+  
+    
+    <!-- <div class="question">
+    <div class="question">This is where my question will be??</div>
+    </div>
+     <div class="Answer">
+    <input type="radio" name="answer" > choice A<br>
+    <input type="radio" name="answer" > choice B<br>
+    <input type="radio" name="answer" > choice C<br>
+    <input type="radio" name="answer" > choice D<br>
+    <input type="radio" name="answer" > choice E<br>
+    </div>
+    </div>  -->
+    </div>
+
 
       <script src="questions.js"></script>    
     <script src="script.js"></script>
