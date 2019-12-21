@@ -4,8 +4,8 @@
   // time-left
   var timeLeft = document.querySelector('#time-left');
 
-  let currentQuestion;
-  let currentQuestionIndex = 0;
+  var currentQuestion;
+  var currentQuestionIndex = 0;
   
 
   // start game button
@@ -38,20 +38,20 @@
 // create function to start game
 function startBtnHandler (){
   console.log('start button pressed')
-  choiceA.addEventListener('click', () => clickChoice(0))
+choiceA.addEventListener('click', () => clickChoice(0))
 choiceB.addEventListener('click', () => clickChoice(1))
 choiceC.addEventListener('click', () => clickChoice(2))
 choiceD.addEventListener('click', () => clickChoice(3))
 choiceE.addEventListener('click', () => clickChoice(4))
   clearInterval (timerId);
-  secondsLeft = 300;
+  secondsLeft = 3000;
   timeLeft.textContent= secondsLeft;
 
   timerId=setInterval (function(){
     secondsLeft --;
     timeLeft.textContent = secondsLeft;
 
-    if (secondsLeft<= 0){
+    if (secondsLeft=== 0){
       stopGame ();
       
     }
@@ -61,7 +61,7 @@ choiceE.addEventListener('click', () => clickChoice(4))
 
 }
 function clickChoice(x) {
-  console.log(`${x} clicked`)
+  console.log([x]);
   currentQuestionIndex++
 
    if (currentQuestion.choices[x] === currentQuestion.answer) {
@@ -89,6 +89,8 @@ function stopGame() {
   choiceC.textContent = "";
   choiceD.textContent = "";
   choiceE.textContent = "";
+
+  // Remove choice listeners here.
 
 
   alert('the game is now over')
