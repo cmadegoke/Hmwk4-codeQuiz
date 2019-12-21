@@ -81,7 +81,6 @@ function clickChoice(x) {
   if (questions.length > currentQuestionIndex) {
     displayQuestion(currentQuestionIndex);
   } else {
-    console.log('hi')
     timeLeft.textContent = " ";
     stopGame();
   }
