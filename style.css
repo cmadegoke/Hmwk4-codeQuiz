@@ -1,9 +1,9 @@
 .app-subtitle{
-color:pink;
+color:violet;
 }
 
 .content {
-  font-weight: bold; color: lawngreen;
+  font-weight: bold; color:blue;
     text-align: center;
     font-size: 30px;
     justify-items: center;
@@ -11,8 +11,7 @@ color:pink;
 }
 .btn btn-primary{
   color: red;
-  padding-block: 10px;
-  font-size: 30px;
+  font-size: 40px;
   border-radius: 10px;
   text-align: center;
 }

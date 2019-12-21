@@ -54,7 +54,7 @@ function startBtnHandler() {
     timeLeft.textContent = secondsLeft;
 
     if (secondsLeft === -1) {
-      alert('the game is now over');
+      alert('The game is Over');
 
       timeLeft.textContent = " ";
       stopGame();
@@ -100,6 +100,7 @@ function stopGame() {
 
 function resetGame(){
   currentQuestionIndex = 0;
+  score = 0;
 }
 
 
