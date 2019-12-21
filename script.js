@@ -53,9 +53,7 @@ choiceE.addEventListener('click', () => clickChoice(4))
 
     if (secondsLeft === -1){
       alert('the game is now over');
-
-      //clearInterval (timerId);
-      
+      timeLeft.textContent = " ";  
       stopGame ();
       //clearInterval (timerId);
       

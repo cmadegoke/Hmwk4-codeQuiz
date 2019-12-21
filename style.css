@@ -4,10 +4,11 @@
 .sub-header {
 float: right;
 }
-.container {
-    justify-content: center;
+.content {
+  border: 5mm;
+   content: initial;
     text-align: center;
-    box-sizing: border-box;
-    right: auto;
+    outline-style: solid;
+    background-origin: sizing 20px;
     justify-items: center;
 }
