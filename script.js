@@ -32,7 +32,7 @@
   // score
   var score = 0;
   // secondsLeft
-  let secondsLeft;
+  var secondsLeft;
 
 
 // create function to start game
@@ -43,20 +43,25 @@ choiceB.addEventListener('click', () => clickChoice(1))
 choiceC.addEventListener('click', () => clickChoice(2))
 choiceD.addEventListener('click', () => clickChoice(3))
 choiceE.addEventListener('click', () => clickChoice(4))
-  clearInterval (timerId);
-  secondsLeft = 3000;
+//clearInterval (timerId);
+  secondsLeft = 10;
   timeLeft.textContent= secondsLeft;
 
   timerId=setInterval (function(){
     secondsLeft --;
     timeLeft.textContent = secondsLeft;
 
-    if (secondsLeft=== 0){
+    if (secondsLeft === -1){
+      alert('the game is now over');
+
+      //clearInterval (timerId);
+      
       stopGame ();
+      //clearInterval (timerId);
       
     }
   }, 1000);
-  displayQuestion(currentQuestionIndex)
+  displayQuestion(currentQuestionIndex);
   // printGameScreen ();
 
 }
@@ -81,7 +86,7 @@ function clickChoice(x) {
 }
 
 function stopGame() {
-  clearInterval(timerId)
+  clearInterval(timerId);
 
   questionElement.textContent = "Game is Over";
   choiceA.textContent = "Your final score was:";
@@ -93,7 +98,7 @@ function stopGame() {
   // Remove choice listeners here.
 
 
-  alert('the game is now over')
+ 
 }
   // set secondsLeft variable starting time (300 seconds = 5 minutes)
   // write secondsLeft to the page
