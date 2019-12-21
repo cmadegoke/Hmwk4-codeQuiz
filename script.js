@@ -87,7 +87,7 @@ function stopGame() {
   clearInterval(timerId);
 
   questionElement.textContent = "Game is Over";
-  choiceA.textContent = "Your final score was:";
+  choiceA.textContent = "Your final score is:";
   choiceB.textContent = score;
   choiceC.textContent = "";
   choiceD.textContent = "";
@@ -130,6 +130,7 @@ function displayQuestion(questionIndex) {
   choiceC.textContent = currentQuestion.choices[2];
   choiceD.textContent = currentQuestion.choices[3];
   choiceE.textContent = currentQuestion.choices[4];
+  
 
 
   // Question2 = questions[questionIndex ]
@@ -141,7 +142,6 @@ function displayQuestion(questionIndex) {
   // choiceE.textContent = currentQuestion.choices[4];
 
 }
-
 
 
 

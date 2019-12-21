@@ -1,14 +1,23 @@
-.hide {
-    display: none;
-  }
-.sub-header {
-float: right;
+.app-subtitle{
+color:pink;
 }
+
 .content {
-  border: 5mm;
-   content: initial;
+  font-weight: bold; color: lawngreen;
     text-align: center;
-    outline-style: solid;
-    background-origin: sizing 20px;
+    font-size: 30px;
     justify-items: center;
+    background-size: contain;
+}
+.btn btn-primary{
+  color: red;
+  padding-block: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.app-title{
+  text-align: center;
+
 }
