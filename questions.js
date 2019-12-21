@@ -10,13 +10,13 @@ var questions = [
         answer: "Ghana"
     },
     {
-        question: "what is a bad Job for someone who is accident prone?",
+        question: "what is a Bad Job for someone who is Accident prone?",
         choices: ["App developer","QA engineer","Surgeon","Ebay seller","School Teacher"],
         answer: "Surgeon"
     },
     {
         question: "what would a customer do to NOT annoy a waitress?",
-        choices: ["Snap fingers","Tip Big","Send food back","Spill drinks"],
+        choices: ["Snap fingers","Tip Big","Send food back","Spill drinks","Flirt"],
         answer: "Tip Big"
     },
     {

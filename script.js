@@ -20,6 +20,11 @@ var choiceB = document.querySelector('#B');
 var choiceC = document.querySelector('#C');
 var choiceD = document.querySelector('#D');
 var choiceE = document.querySelector('#E');
+choiceA.addEventListener('click', () => clickChoice(0))
+choiceB.addEventListener('click', () => clickChoice(1))
+choiceC.addEventListener('click', () => clickChoice(2))
+choiceD.addEventListener('click', () => clickChoice(3))
+choiceE.addEventListener('click', () => clickChoice(4))
 
 // post-game-screen
 // user-score
@@ -38,13 +43,10 @@ var secondsLeft;
 // create function to start game
 function startBtnHandler() {
   console.log('start button pressed')
-  choiceA.addEventListener('click', () => clickChoice(0))
-  choiceB.addEventListener('click', () => clickChoice(1))
-  choiceC.addEventListener('click', () => clickChoice(2))
-  choiceD.addEventListener('click', () => clickChoice(3))
-  choiceE.addEventListener('click', () => clickChoice(4))
+
   clearInterval(timerId);
   secondsLeft = 10;
+
   currentQuestionIndex = 0;
 
   timeLeft.textContent = secondsLeft;
@@ -58,7 +60,7 @@ function startBtnHandler() {
 
       timeLeft.textContent = " ";
       stopGame();
-      //clearInterval (timerId);
+      clearInterval (timerId);
     }
   }, 1000);
   displayQuestion(currentQuestionIndex);
@@ -67,7 +69,7 @@ function startBtnHandler() {
 }
 
 function clickChoice(x) {
-  console.log([x]);
+  console.log(x);
   currentQuestionIndex++
 
   if (currentQuestion.choices[x] === currentQuestion.answer) {
@@ -79,6 +81,7 @@ function clickChoice(x) {
   if (questions.length > currentQuestionIndex) {
     displayQuestion(currentQuestionIndex);
   } else {
+    console.log('hi')
     timeLeft.textContent = " ";
     stopGame();
   }
